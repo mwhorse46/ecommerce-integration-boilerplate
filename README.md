@@ -2,13 +2,13 @@
 
 # Boilerplate for Vue Storefront Next
 
-<a href="https://slack.vuestorefront.io">![Branch Develop](https://img.shields.io/badge/community%20chat-slack-FF1493.svg)</a>
+<a href="https://discord.vuestorefront.io">![Our Discord server](https://img.shields.io/discord/770285988244750366?label=join%20discord&logo=Discord&logoColor=white)</a>
 
 > **Disclaimer:** This project is still in beta phase.
 
-This repository is a starting point for creating new integrations for [Vue Storefront Next](https://github.com/DivanteLtd/vue-storefront/tree/next).
+This repository is a starting point for creating new integrations for [Vue Storefront Next](https://github.com/vuestorefront/vue-storefront/).
 
-* [Documentation](https://docs-next.vuestorefront.io/integrate/ecommerce.html#scope) (WIP)
+* [Documentation](https://docs.vuestorefront.io/v2/integrate/integration-guide.html) (WIP)
 
 
 This repository is a monorepo containing three projects:
