@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/boilerplate-theme",
+  "name": "@vue-storefront/<% INTEGRATION %>-theme",
   "version": "2.3.0",
   "private": true,
   "scripts": {
