@@ -1,12 +1,11 @@
 # Boilerplate for Vue Storefront 2 eCommerce integration
 
-This is a template, to use it you must first do some steps before:
-
-1 - Rename the project changing the `{YOUR INTEGRATION NAME}` to the name of the integration you are developing. The name must be in lowercase and without any special characters.
+This is a template, to use it you must rename the project changing the `{YOUR INTEGRATION NAME}` to the name of the integration you are developing. The name must be in lowercase and without any special characters.
 
 ```sh
-sed -i '' 's/<% INTEGRATION %>/{YOUR INTEGRATION NAME}/g' .github/* README.md docs/* packages/* .vuestorefrontcloud/* .all-contributorsrc
+grep -rl '<% INTEGRATION %>' ./ | xargs sed -i '' 's/<% INTEGRATION %>/{YOUR INTEGRATION NAME}/g'
 ```
+
 ------
 
 <div align="center">
