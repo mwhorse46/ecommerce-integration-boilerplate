@@ -1,0 +1,28 @@
+<div align="center">
+<img src="https://blog.vuestorefront.io/wp-content/uploads/2020/01/1QU9F6hQlFyHsJIbsdmt6FA.png" height="80px"/>  
+</div>
+
+## Vue Storefront 2 integration with <% INTEGRATION %>
+
+------
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+## Resources
+
+- [Vue Storefront Documentation](https://docs.vuestorefront.io/v2/)
+- [<% INTEGRATION %> integration Documentation](https://docs.vuestorefront.io/<% INTEGRATION %>)
+- [Community Chat](https://discord.vuestorefront.io)
+
+## Support
+
+If you have any questions about this integration we will be happy to answer them on `<% INTEGRATION %>` channel on [our Discord](discord.vuestorefront.io).
+
+## Contributors ✨
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
