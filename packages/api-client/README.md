@@ -9,6 +9,15 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+## How to start if you want to try out the integration
+
+```
+yarn global add @vue-storefront/cli
+```
+```
+vsf init <project_name> && cd <project_name> && yarn && yarn dev
+```
+
 ## Resources
 
 - [Vue Storefront Documentation](https://docs.vuestorefront.io/v2/)
