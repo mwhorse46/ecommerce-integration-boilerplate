@@ -1,6 +1,6 @@
 {
   "name": "@vue-storefront/<% INTEGRATION %>-api",
-  "version": "2.3.0",
+  "version": "2.3.4",
   "private": true,
   "sideEffects": false,
   "server": "server/index.js",

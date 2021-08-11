@@ -1,7 +1,7 @@
 module.exports = {
   integrations: {
-    boilerplate: {
-      location: '@vue-storefront/boilerplate-api/server',
+    <% INTEGRATION %>: {
+      location: '@vue-storefront/<% INTEGRATION %>-api/server',
       configuration: {}
     }
   }
