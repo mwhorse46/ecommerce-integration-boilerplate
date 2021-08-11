@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 
 export default {
-  mode: 'universal',
   server: {
     port: 3000,
     host: '0.0.0.0'
@@ -99,6 +98,13 @@ export default {
     scss: [require.resolve('@storefront-ui/shared/styles/_helpers.scss', { paths: [process.cwd()] })]
   },
   build: {
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ['@babel/plugin-proposal-private-methods', { loose: true }],
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+      ]
+    },
     transpile: [
       'vee-validate/dist/rules'
     ],
@@ -111,8 +117,12 @@ export default {
         })
       })
     ],
-    extend (config, ctx) {
+    extend(config, ctx) {
+      // eslint-disable-next-line no-param-reassign
+      config.devtool = ctx.isClient ? 'eval-source-map' : 'inline-source-map';
+
       if (ctx && ctx.isClient) {
+        // eslint-disable-next-line no-param-reassign
         config.optimization = {
           ...config.optimization,
           mergeDuplicateChunks: true,
@@ -135,15 +145,6 @@ export default {
             }
           }
         };
-      }
-    }
-  },
-  router: {
-    scrollBehavior (_to, _from, savedPosition) {
-      if (savedPosition) {
-        return savedPosition;
-      } else {
-        return { x: 0, y: 0 };
       }
     }
   }
