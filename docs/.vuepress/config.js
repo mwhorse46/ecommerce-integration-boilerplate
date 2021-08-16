@@ -21,6 +21,10 @@ module.exports = {
     }))
   },
   themeConfig: {
+    nav: [
+      { text: 'Vue Storefront', link: 'https://vuestorefront.io/' },
+      { text: 'Core Documentation', link: 'https://docs.vuestorefront.io/v2/' }
+    ],
     sidebar: [
       {
         title: 'Essentials',
