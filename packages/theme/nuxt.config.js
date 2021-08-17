@@ -5,6 +5,7 @@ export default {
     port: 3000,
     host: '0.0.0.0'
   },
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Vue Storefront',
     meta: [
@@ -37,7 +38,9 @@ export default {
     ]
   },
   loading: { color: '#fff' },
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // to core
     '@nuxt/typescript-build',
@@ -72,6 +75,7 @@ export default {
     project-only-end */
     ['@vue-storefront/<% INTEGRATION %>/nuxt', {}]
   ],
+  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-i18n',
     'cookie-universal-nuxt',
@@ -97,6 +101,7 @@ export default {
   styleResources: {
     scss: [require.resolve('@storefront-ui/shared/styles/_helpers.scss', { paths: [process.cwd()] })]
   },
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
       plugins: [
