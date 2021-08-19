@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/boilerplate-api",
+  "name": "@vue-storefront/<% INTEGRATION %>-api",
   "version": "2.4.0",
   "private": true,
   "sideEffects": false,
@@ -10,8 +10,11 @@
   "scripts": {
     "build": "rimraf lib server && rollup -c",
     "dev": "rollup -c -w",
+    "precommit": "lint-staged",
+    "prepublish": "yarn build",
     "test": "jest",
-    "prepublish": "yarn build"
+    "update:check": "ncu",
+    "update:update": "ncu -u"
   },
   "dependencies": {
     "@vue-storefront/core": "~2.4.0"

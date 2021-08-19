@@ -7,7 +7,6 @@ export default {
     port: 3000,
     host: '0.0.0.0'
   },
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Vue Storefront',
@@ -17,8 +16,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      {
-        rel: 'icon',
+      { rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
@@ -33,12 +31,9 @@ export default {
       }
     ]
   },
-
   loading: { color: '#fff' },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // to core
@@ -50,11 +45,11 @@ export default {
       // @core-development-only-end
       useRawSource: {
         dev: [
-          '@vue-storefront/boilerplate',
+          '@vue-storefront/<% INTEGRATION %>',
           '@vue-storefront/core'
         ],
         prod: [
-          '@vue-storefront/boilerplate',
+          '@vue-storefront/<% INTEGRATION %>',
           '@vue-storefront/core'
         ]
       }
@@ -63,8 +58,8 @@ export default {
     ['@vue-storefront/nuxt-theme', {
       generate: {
         replace: {
-          apiClient: '@vue-storefront/boilerplate-api',
-          composables: '@vue-storefront/boilerplate'
+          apiClient: '@vue-storefront/<% INTEGRATION %>-api',
+          composables: '@vue-storefront/<% INTEGRATION %>'
         }
       }
     }],
@@ -72,9 +67,8 @@ export default {
     /* project-only-start
     ['@vue-storefront/nuxt-theme'],
     project-only-end */
-    ['@vue-storefront/boilerplate/nuxt', {}]
+    ['@vue-storefront/<% INTEGRATION %>/nuxt', {}]
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-i18n',
@@ -82,7 +76,6 @@ export default {
     'vue-scrollto/nuxt',
     '@vue-storefront/middleware/nuxt'
   ],
-
   i18n: {
     currency: 'USD',
     country: 'US',
@@ -123,15 +116,14 @@ export default {
       cookieKey: VSF_LOCALE_COOKIE
     }
   },
-
   styleResources: {
     scss: [require.resolve('@storefront-ui/shared/styles/_helpers.scss', { paths: [process.cwd()] })]
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
       plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ]
     },
@@ -148,7 +140,6 @@ export default {
       })
     ]
   },
-
   router: {
     middleware: ['checkout'],
     scrollBehavior (_to, _from, savedPosition) {
